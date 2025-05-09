@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SanPham));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -55,10 +54,8 @@
             btn_thoat = new Button();
             label10 = new Label();
             txt_timkiemtheoten = new TextBox();
-            pic_timkiem = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pic_anhsanpham).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgv_bangquanly).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pic_timkiem).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -166,6 +163,7 @@
             pic_anhsanpham.Location = new Point(872, 41);
             pic_anhsanpham.Name = "pic_anhsanpham";
             pic_anhsanpham.Size = new Size(100, 111);
+            pic_anhsanpham.SizeMode = PictureBoxSizeMode.StretchImage;
             pic_anhsanpham.TabIndex = 2;
             pic_anhsanpham.TabStop = false;
             pic_anhsanpham.Click += pic_anhsanpham_Click;
@@ -305,23 +303,11 @@
             txt_timkiemtheoten.TabIndex = 3;
             txt_timkiemtheoten.TextChanged += txt_timkiemtheoten_TextChanged;
             // 
-            // pic_timkiem
-            // 
-            pic_timkiem.Image = (Image)resources.GetObject("pic_timkiem.Image");
-            pic_timkiem.Location = new Point(518, 206);
-            pic_timkiem.Name = "pic_timkiem";
-            pic_timkiem.Size = new Size(28, 23);
-            pic_timkiem.SizeMode = PictureBoxSizeMode.Zoom;
-            pic_timkiem.TabIndex = 7;
-            pic_timkiem.TabStop = false;
-            pic_timkiem.Click += pic_timkiem_Click;
-            // 
             // SanPham
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1083, 539);
-            Controls.Add(pic_timkiem);
             Controls.Add(btn_thoat);
             Controls.Add(btn_xoa);
             Controls.Add(btn_sua);
@@ -349,10 +335,10 @@
             Controls.Add(label5);
             Controls.Add(label1);
             Name = "SanPham";
-            Text = "SanPham";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Trang quản lý sản phẩm";
             ((System.ComponentModel.ISupportInitialize)pic_anhsanpham).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgv_bangquanly).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pic_timkiem).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

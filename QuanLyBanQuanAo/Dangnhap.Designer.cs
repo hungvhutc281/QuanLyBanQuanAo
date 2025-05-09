@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dangnhap));
             label1 = new Label();
             label2 = new Label();
-            txt_tkhoan = new TextBox();
-            txt_matkhau = new TextBox();
             btn_dangnhap = new Button();
             pictureBox1 = new PictureBox();
             btn_thoat = new Button();
             pictureBox2 = new PictureBox();
+            txt_tendangnhap = new TextBox();
+            txt_matkhau = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -61,22 +61,6 @@
             label2.TabIndex = 0;
             label2.Text = "Mật khẩu";
             // 
-            // txt_tkhoan
-            // 
-            txt_tkhoan.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            txt_tkhoan.Location = new Point(552, 163);
-            txt_tkhoan.Name = "txt_tkhoan";
-            txt_tkhoan.Size = new Size(152, 26);
-            txt_tkhoan.TabIndex = 1;
-            // 
-            // txt_matkhau
-            // 
-            txt_matkhau.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            txt_matkhau.Location = new Point(552, 198);
-            txt_matkhau.Name = "txt_matkhau";
-            txt_matkhau.Size = new Size(152, 26);
-            txt_matkhau.TabIndex = 1;
-            // 
             // btn_dangnhap
             // 
             btn_dangnhap.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -86,6 +70,7 @@
             btn_dangnhap.TabIndex = 2;
             btn_dangnhap.Text = "Đăng nhập";
             btn_dangnhap.UseVisualStyleBackColor = true;
+            btn_dangnhap.Click += btn_dangnhap_Click_1;
             // 
             // pictureBox1
             // 
@@ -106,6 +91,7 @@
             btn_thoat.TabIndex = 4;
             btn_thoat.Text = "Thoát";
             btn_thoat.UseVisualStyleBackColor = true;
+            btn_thoat.Click += btn_thoat_Click;
             // 
             // pictureBox2
             // 
@@ -117,20 +103,36 @@
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
-            // Form1
+            // txt_tendangnhap
+            // 
+            txt_tendangnhap.Location = new Point(570, 173);
+            txt_tendangnhap.Name = "txt_tendangnhap";
+            txt_tendangnhap.Size = new Size(134, 23);
+            txt_tendangnhap.TabIndex = 6;
+            txt_tendangnhap.TextChanged += txt_tendangnhap_TextChanged;
+            // 
+            // txt_matkhau
+            // 
+            txt_matkhau.Location = new Point(570, 202);
+            txt_matkhau.Name = "txt_matkhau";
+            txt_matkhau.Size = new Size(134, 23);
+            txt_matkhau.TabIndex = 6;
+            txt_matkhau.PasswordChar = '*';
+            // 
+            // Dangnhap
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(751, 458);
+            Controls.Add(txt_matkhau);
+            Controls.Add(txt_tendangnhap);
             Controls.Add(btn_thoat);
             Controls.Add(pictureBox1);
             Controls.Add(btn_dangnhap);
-            Controls.Add(txt_matkhau);
-            Controls.Add(txt_tkhoan);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
-            Name = "Form1";
+            Name = "Dangnhap";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Trang đăng nhập quản lý";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -143,11 +145,11 @@
 
         private Label label1;
         private Label label2;
-        private TextBox txt_tkhoan;
-        private TextBox txt_matkhau;
         private Button btn_dangnhap;
         private PictureBox pictureBox1;
         private Button btn_thoat;
         private PictureBox pictureBox2;
+        private TextBox txt_tendangnhap;
+        private TextBox txt_matkhau;
     }
 }
