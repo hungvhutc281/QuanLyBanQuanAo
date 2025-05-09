@@ -1,8 +1,8 @@
 namespace QuanLyBanQuanAo
 {
-    public partial class Form1 : Form
+    public partial class Dangnhap : Form
     {
-        public Form1()
+        public Dangnhap()
         {
             InitializeComponent();
         }
